@@ -11,6 +11,9 @@ _TODO: Add versions._
 - Keras
 - Pandas
 
+## Repository Description
+- Utils: Contains a variety of utility functions used for tasks like file processing (rename files, move files, etc.), image processing (merge left and right image, etc.), and video processing (concatenate video streams, extract frames from video, etc.).
+
 ## Project Description
 Monitoring farmed fish welfare is crucial from ethical and financial perspectives. Going towards a more autonomous fish farming industry, there are many aspects that can be explored using computer vision-based techniques on camera data from farmed fish sea cages to monitor fish behaviour. Deep-learning based computer vision enables adaptable, scalable, and data-driven methods suitable for overcoming challenges of the dynamic underwater environment in sea cages. Examples of indicators of fish welfare that can be captured by vision are swimming speed, lice, wounds/injuries, gill cover frequency, and fish orientation. This master’s thesis will thus investigate vision-based techniques on stereo camera data from farmed salmon sea cages to monitor swimming behavior of farmed salmon.
 
