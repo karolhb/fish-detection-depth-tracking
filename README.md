@@ -1,7 +1,7 @@
 # Vision-Based Detection, Depth Estimation, and Tracking of Fish
 Repository for work conducted in the course _TMR4930 - Marine Technology, Master's Thesis_.
 
-The project uses YOLOv4 for object detection, ?? for depth estimation, and a simple IOU tracking algorithm based on [E. Bochinski, V. Eiselein and T. Sikora, 2017](https://ieeexplore.ieee.org/document/8078516). First, fish tails fins are detected. Depth information in the bounding boxes is estimated, and averaged over a small patch in the middle of the bounding box (likely to cover only fin surface). The tail fins are further tracked in consecutive frames. The depth information combined with the tracks will be used for extracting information about swimming velocity of the fish.
+The project uses YOLOv4 for object detection, ?? for depth estimation, and a simple IOU tracking algorithm based on [E. Bochinski, V. Eiselein and T. Sikora, 2017](https://ieeexplore.ieee.org/document/8078516). First, fish tail fins are detected. Depth information in the bounding boxes is estimated, and averaged over a small patch in the middle of the bounding box (likely to cover only fin surface). The tail fins are further tracked in consecutive frames. The depth information combined with the tracks will be used for extracting information about swimming velocity of the fish.
 
 ## Dependencies
 _TODO: Add versions._
@@ -15,7 +15,7 @@ _TODO: Add versions._
 - Pandas
 
 ## Repository Description
-_TODO: Add remaining code_
+_TODO: Add remaining code._
 - Utils: Contains a variety of utility functions used for tasks like file processing (rename files, move files, etc.), image processing (merge left and right image, etc.), and video processing (concatenate video streams, extract frames from video, etc.).
 
 ## Project Description
