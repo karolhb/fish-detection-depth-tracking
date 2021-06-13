@@ -8,12 +8,14 @@ _TODO: Add versions._
 - CUDA
 - Darknet
 - OpenCV
+- FFmpeg
 - Python PIL
 - Tensorflow
 - Keras
 - Pandas
 
 ## Repository Description
+_TODO: Add remaining code_
 - Utils: Contains a variety of utility functions used for tasks like file processing (rename files, move files, etc.), image processing (merge left and right image, etc.), and video processing (concatenate video streams, extract frames from video, etc.).
 
 ## Project Description
