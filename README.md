@@ -1,7 +1,7 @@
 # Vision-Based Detection, Depth Estimation, and Tracking of Fish
 Repository for work conducted in the course _TMR4930 - Marine Technology, Master's Thesis_.
 
-The project uses YOLOv4 [(Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao, 2020)](https://arxiv.org/abs/2004.10934) for object detection, ?? for depth estimation, and a simple IOU tracking algorithm based on [E. Bochinski, V. Eiselein and T. Sikora, 2017](https://ieeexplore.ieee.org/document/8078516). First, fish tail fins are detected. Depth information in the bounding boxes is estimated, and averaged over a small patch in the middle of the bounding box (likely to cover only fin surface). The tail fins are further tracked in consecutive frames. The depth information combined with the tracks will be used for extracting information about swimming velocity of the fish.
+The project uses YOLOv4 [(Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao, 2020)](https://arxiv.org/abs/2004.10934) for object detection, semi-global block matching (by [OpenCV](https://docs.opencv.org/4.5.2/d2/d85/classcv_1_1StereoSGBM.html)) for depth estimation, and a simple IOU tracking algorithm based on [E. Bochinski, V. Eiselein and T. Sikora, 2017](https://ieeexplore.ieee.org/document/8078516). First, fish tail fins are detected. Depth information in the bounding boxes is estimated, and averaged over a small patch in the middle of the bounding box (likely to cover only fin surface). The tail fins are further tracked in consecutive frames. The depth information combined with the tracks will be used for extracting information about swimming velocity of the fish.
 
 _Remark: This repository is meant to use as an attachment for my Master's thesis at NTNU._
 
