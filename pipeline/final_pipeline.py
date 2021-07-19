@@ -13,14 +13,11 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-from utils import convert_back, convert_tracks
+from tracker_utils import convert_back, convert_tracks
 from iou_trackers import tracker_iou, tracker_iou_allow_gaps
+from rectification_and_disparity import rectify, disparity
 
 import sys
-
-sys.path.insert(0, '/LAKSIT_calibration')
-from LAKSIT_calibration.rectification_and_disparity import rectify, disparity
-
 sys.path.append(os.path.join(os.getcwd(),'python/'))
 import darknet
 
