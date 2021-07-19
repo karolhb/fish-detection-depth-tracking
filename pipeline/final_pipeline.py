@@ -125,7 +125,7 @@ def replace_frame_with_dm(img):
     h,w,_ = img.shape
     left_frame = img[:, :w//2, :]
     right_frame = img[:, w//2:, :]
-    calibration_file = r"Y:\Yolo_v4\darknet\build\darknet\x64\LAKSIT_calibration\calibration\calibration_params.npz"
+    calibration_file = "calibration_params.npz"
     rect1, rect2 = rectify(calibration_file, left_frame, right_frame)
     disp1, disp2, filtered_disp, num_disp, min_disp = disparity(rect1, rect2, filter=True)
     dm = (filtered_disp-min_disp)/num_disp
@@ -220,7 +220,7 @@ all_detections = None
 all_detections_depth = None
 unique_objects = None
 
-def YOLO(input_video_path, output_video_path, track_output_path):
+def pipeline(input_video_path, output_video_path, track_output_path):
     global metaMain, netMain, altNames, all_detections, all_detections_depth, unique_objects
     basePath = "Y:/Yolo_v4/darknet/build/darknet/x64"
     configPath = basePath + "/cfg/yolov4-fishfins3.cfg"
@@ -300,7 +300,7 @@ def YOLO(input_video_path, output_video_path, track_output_path):
         image, dm_values, centroids = find_inner_bbox(detections, frame_resized, 0.15)
 
         # input image w/ bbox
-        #image_with_depth = replace_bbox_with_depthmap(r'Y:\Yolo_v4\darknet\build\darknet\x64\dm.png', r'Y:\Yolo_v4\darknet\build\darknet\x64\img_w_bboxes.png', centroids, dm_values)
+        #image_with_depth = replace_bbox_with_depthmap("dm.png", "img_w_bboxes.png", centroids, dm_values)
 
         # input image w/o bbox
         image_with_depth = replace_bbox_with_depthmap("dm.png", "img_orig.png", centroids, dm_values)
@@ -382,4 +382,4 @@ if __name__ == "__main__":
     output_video_path = "output.avi"
     input_path_merged = "input.mp4"
     track_output_path = "track_output.avi"
-    YOLO(input_path_merged, output_video_path, track_output_path)
+    pipeline(input_path_merged, output_video_path, track_output_path)
