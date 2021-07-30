@@ -6,7 +6,6 @@ The project uses YOLOv4 [(Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark
 _Remark: This repository is an attachment for my Master's thesis at NTNU._
 
 ## Dependencies
-_TODO: Add versions._
 - CUDA
 - Darknet
 - OpenCV
